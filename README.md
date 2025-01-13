@@ -1,6 +1,6 @@
 # Maksupalvelut API
 
-This project provides a simple API to retrieve information about payment service providers in Finland, based on data from the Finnish Financial Supervisory Authority's open data API (MaVe API).
+- This project provides a simple API to retrieve information about payment service providers in Finland, based on data from the Finnish Financial Supervisory Authority's open data API (MaVe API).
 
 ## Functionality
 
@@ -9,7 +9,7 @@ The API supports the following functionalities:
 - **Retrieve Licenses by Business ID:** Fetch a list of licenses held by a payment service provider, identified by their Finnish business ID (Y-tunnus).
 - **Retrieve Contact Information by Company Name:** Fetch the contact information of a payment service provider, identified by their name.
 
-The API fetches the latest data from the [Finnish Financial Supervisory Authority's open data API](http://api.boffsaopendata.fi/mave/api/v1/maksupalveluntarjoajat) once when the API is run and saves it in memory for quick access.
+- The API fetches the latest data from the [Finnish Financial Supervisory Authority's open data API](http://api.boffsaopendata.fi/mave/api/v1/maksupalveluntarjoajat) once when the API is run and saves it in memory for quick access.
 
 ## Project Structure
 
@@ -41,7 +41,8 @@ Follow these steps to set up the project on your local machine:
    ```
 
 3. **Install dependencies:**
-   Install the project dependencies using Poetry:
+
+   - Install the project dependencies using Poetry:
 
    ```bash
    poetry install
@@ -49,13 +50,13 @@ Follow these steps to set up the project on your local machine:
 
 ## Running the Application
 
-To start the API, execute the following command from the project's root directory:
+- To start the API, execute the following command from the project's root directory:
 
 ```bash
 poetry run maksupalvelut-api
 ```
 
-This command starts the Flask development server. By default, it will listen to `http://127.0.0.1:5000/`.
+- This command starts the Flask development server. By default, it will listen to `http://127.0.0.1:5000/`.
 
 ## API Endpoints
 
@@ -70,25 +71,26 @@ Once the application is running, you can access the following endpoints:
   - **Response (Success - 200 OK):**
     ```json
     [
-        {
-            "country": "Suomi",
-            "law_section": "UlkMLL 5 §"
-        },
-        {
-            "country": "Suomi",
-            "law_section": "MLL 1 § 2 mom 3 kohta, EBA ITS alakohta 5a)"
-        },
-        ...
-    ]
-    ```
-  - **Response (Not Found - 404 Not Found):**
-    ```json
     {
-      "error": "Payment service provider with business ID 'xyz' not found."
-    }
-    ```
+    "country": "Suomi",
+    "law_section": "UlkMLL 5 §"
+    },
+    {
+    "country": "Suomi",
+    "law_section": "MLL 1 § 2 mom 3 kohta, EBA ITS alakohta 5a)"
+    },
+    ...
+    ]
 
-- **Get Contact Information by Company Name:**
+  ````
+  - **Response (Not Found - 404 Not Found):**
+  ```json
+  {
+    "error": "Payment service provider with business ID 'xyz' not found."
+  }
+  ````
+
+* **Get Contact Information by Company Name:**
   - **Endpoint:** `/contacts/<company_name>`
   - **Method:** `GET`
   - **Description:** Retrieves the contact information for the payment service provider with the specified name.
@@ -119,3 +121,8 @@ poetry run pytest
 ```
 
 This command will execute the tests defined in the `tests/test_api.py` file within the project's virtual environment and report the results.
+
+## AI use
+
+- Github Copilot for code suggestions and doctstrings.
+- ChatGPT for sketching the documentation, brainstorming improvement ideas, finding information and checking for possible bugs.
