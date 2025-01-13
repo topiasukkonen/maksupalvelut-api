@@ -69,6 +69,7 @@ Once the application is running, you can access the following endpoints:
   - **Description:** Retrieves a list of licenses for the payment service provider with the specified business ID.
   - **Example:** `http://127.0.0.1:5000/licenses/2382421-3`
   - **Response (Success - 200 OK):**
+
     ```json
     [
     {
@@ -83,20 +84,21 @@ Once the application is running, you can access the following endpoints:
     ]
     ```
 
-  ````
   - **Response (Not Found - 404 Not Found):**
-  ```json
-  {
-    "error": "Payment service provider with business ID 'xyz' not found."
-  }
-  ````
+    ```json
+    {
+      "error": "Payment service provider with business ID 'xyz' not found."
+    }
+    ```
 
 * **Get Contact Information by Company Name:**
+
   - **Endpoint:** `/contacts/<company_name>`
   - **Method:** `GET`
   - **Description:** Retrieves the contact information for the payment service provider with the specified name.
   - **Example:** `http://127.0.0.1:5000/contacts/AS%20SEB%20Pank`
   - **Response (Success - 200 OK):**
+
     ```json
     {
       "country": "Viro",
@@ -106,6 +108,7 @@ Once the application is running, you can access the following endpoints:
       "postal_code": null
     }
     ```
+
   - **Response (Not Found - 404 Not Found):**
     ```json
     {
