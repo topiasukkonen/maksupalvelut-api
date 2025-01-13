@@ -1,5 +1,5 @@
 import pytest
-from src.app import app
+from maksupalvelut_api import app
 
 
 @pytest.fixture

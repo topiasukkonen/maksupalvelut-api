@@ -14,7 +14,7 @@ The API supports the following functionalities:
 ## Project Structure
 
 - **`main.py`**: The entry point of the application. It initializes and runs the Flask application.
-- **`src/`**: Contains the source code of the application.
+- **`maksupalvelut_api/`**: Contains the source code of the application.
   - **`app.py`**: Initializes the Flask application and configures logging.
   - **`routes.py`**: Defines the API routes and their corresponding logic for retrieving data. It also fetches the initial data and creates in-memory indices for faster lookups.
   - **`types.py`**: Defines type hints for data structures, improving code readability and maintainability.
@@ -81,6 +81,7 @@ Once the application is running, you can access the following endpoints:
     },
     ...
     ]
+    ```
 
   ````
   - **Response (Not Found - 404 Not Found):**
